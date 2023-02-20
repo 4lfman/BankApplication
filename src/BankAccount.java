@@ -3,6 +3,7 @@ public class BankAccount {
 	private Customer customer;
 	private long balance;
 	private int AccountNumber;
+	static int currAccountNr=1001;
 
 	/**
 	 * Skapar ett nytt bankkonto åt en innehavare med namn 'holderName' och id
@@ -10,6 +11,8 @@ public class BankAccount {
 	 * inledningsvis 0 kr.
 	 */
 	public BankAccount(String holderName, long holderId) {
+		AccountNumber = currAccountNr;
+		currAccountNr++;
 		this.customer = new Customer(holderName, holderId);
 	}
 
@@ -18,6 +21,8 @@ public class BankAccount {
 	 * kontonummer och innehåller inledningsvis 0 kr.
 	 */
 	public BankAccount(Customer holder) {
+		AccountNumber = currAccountNr;
+		currAccountNr++;
 		this.customer = holder;
 	}
 
