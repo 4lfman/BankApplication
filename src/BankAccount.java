@@ -2,7 +2,8 @@
 public class BankAccount {
 	private Customer customer;
 	private long balance;
-	
+	private int AccountNumber;
+
 	/**
 	 * Skapar ett nytt bankkonto åt en innehavare med namn 'holderName' och id
 	 * 'holderId'. Kontot tilldelas ett unikt kontonummer och innehåller
@@ -27,7 +28,7 @@ public class BankAccount {
 
 	/** Tar reda på det kontonummer som identifierar detta konto. */
 	public int getAccountNumber() {
-		
+		return AccountNumber;
 	}
 
 	/** Tar reda på hur mycket pengar som finns på kontot. */
@@ -50,7 +51,7 @@ public class BankAccount {
 
 	/** Returnerar en strängrepresentation av bankkontot. */
 	public String toString() {
-		
+		return "Konto " + AccountNumber + " " + customer.toString();
 	}
 
 }
